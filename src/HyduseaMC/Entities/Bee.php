@@ -1,6 +1,6 @@
 <?php
 
-namespace HyduseaMC\ULTRAMOBS\Entities;
+namespace HyduseaMC\HyduseaSpawners\Entities;
 
 use HyduseaMC\ULTRAMOBS\Pocketmine\AddActorPacket;
 

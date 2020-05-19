@@ -2,7 +2,7 @@
 
 namespace HyduseaMC\HyduseaSpawners\Entities;
 
-use HyduseaMC\ULTRAMOBS\Pocketmine\AddActorPacket;
+use HyduseaMC\HyduseaSpawners\Pocketmine\AddActorPacket;
 
 use pocketmine\entity\Living;
 use pocketmine\Player;

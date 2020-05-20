@@ -1,8 +1,8 @@
 --- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/HyduseaMC/HyduseaSpawners
-build-by-default: true
+build-by-default: false
 branches:
 - master
-projects: []
+projects: 
   HyduseaSpawners:
      path: ""
      icon: Pig_Spawner.png 

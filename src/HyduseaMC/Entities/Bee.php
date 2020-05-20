@@ -20,23 +20,24 @@ class Bee extends Living
         return "Bee";
     }
 
-    public function getDrops(): array{
-        $lootingL = 1;
-        $cause = $this->lastDamageCause;
-        if($cause instanceof EntityDamageByEntityEvent){
-            $dmg = $cause->getDamager();
-            if($dmg instanceof Player){
-                 
+    protected function sendSpawnPacket(Player $player): void
+    {
+        $pk = new AddActorPacket();
+        $pk->entityRuntimeId = $this->getId();
+        $pk->type = static::NETWORK_ID;
+        $pk->position = $this->asVector3();
+        $pk->motion = $this->getMotion();
+        $pk->yaw = $this->yaw;
+        $pk->headYaw = $this->yaw; //TODO
+        $pk->pitch = $this->pitch;
+        $pk->attributes = $this->attributeMap->getAll();
+        $pk->metadata = $this->propertyManager->getAll();
 
-                $looting = $dmg->getInventory()->getItemInHand()->getEnchantment(Enchantment::LOOTING);
-                if($looting !== null){
-                    $lootingL = $looting->getLevel();
-                }else{
-                    $lootingL = 1;
-            }
-            }
-        }
-        return [Item::get(Item::Sunflower, 0, mt_rand(0, 1 * $lootingL))];
+        $player->dataPacket($pk);
     }
 
+    public function getXpDropAmount(): int
+    {
+        return mt_rand(1, 3);
+    }
 }

@@ -44,4 +44,4 @@ class Chicken extends Animal {
 
         return $drops;
     }
-}
+} 

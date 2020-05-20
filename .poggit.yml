@@ -1,9 +1,12 @@
 --- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/HyduseaMC/HyduseaSpawners
-build-by-default: false
+build-by-default: true
 branches:
 - master
-projects:[] 
+projects:
   HyduseaSpawners:
-     path: ""
-     icon: Pig_Spawner.png 
-...
+    path: ""
+    libs:
+      - src: jojoe77777/FormAPI/libFormAPI
+        version: ^1.3
+      - src: JackMD/UpdateNotifier/UpdateNotifier
+        version: ^1.0.0

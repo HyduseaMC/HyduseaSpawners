@@ -2,7 +2,7 @@
 build-by-default: false
 branches:
 - master
-projects: 
+projects:[] 
   HyduseaSpawners:
      path: ""
      icon: Pig_Spawner.png 

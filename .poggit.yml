@@ -2,12 +2,5 @@
 build-by-default: true
 branches:
 - master
-projects:
-  HyduseaSpawners:
-    path: ""
-    libs:
-      - src: jojoe77777/FormAPI/libFormAPI
-        version: ^1.3
-      - src: JackMD/UpdateNotifier/UpdateNotifier
-        version: ^1.0.0
+projects:[]
 ...
